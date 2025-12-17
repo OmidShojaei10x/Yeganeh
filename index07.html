@@ -17,8 +17,10 @@
                     },
                     colors: {
                         yektanet: {
-                            red: '#D32F2F', // Approximate brand color
-                            dark: '#212121',
+                            gold: '#fed813',    // Gold Web
+                            saffron: '#f3c42e', // Saffron
+                            jet: '#323232',     // Jet
+                            smoke: '#f2f2f2',   // White Smoke
                         }
                     }
                 }
@@ -46,7 +48,7 @@
         }
 
         body {
-            background-color: #f3f4f6;
+            background-color: #f2f2f2; /* Yektanet White Smoke */
             font-family: 'Sahel', sans-serif;
         }
         /* Custom scrollbar */
@@ -116,18 +118,18 @@
 </head>
 <body class="text-gray-800 antialiased pb-20">
 
-    <!-- Navbar -->
+        <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center gap-2">
                         <img src="logo/Logo Export-All Variants/Asset 7.svg" alt="لوگوی یکتانت" class="h-8 w-auto">
-                        <span class="font-bold text-xl text-gray-900">سیستم ارزیابی یکتانت</span>
+                        <span class="font-bold text-xl text-yektanet-jet">سیستم ارزیابی یکتانت</span>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <button onclick="window.print()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors">
+                    <button onclick="window.print()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium text-yektanet-jet hover:bg-yektanet-smoke transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                         </svg>
@@ -144,7 +146,7 @@
 
         <!-- Header / Executive Summary -->
         <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <div class="bg-gradient-to-r from-gray-900 to-gray-800 p-6 text-white sm:flex sm:justify-between sm:items-center">
+            <div class="bg-yektanet-jet p-6 text-white sm:flex sm:justify-between sm:items-center border-b-4 border-yektanet-gold">
                 <div>
                     <h1 class="text-3xl font-bold mb-1">یگانه ولی‌محمدی</h1>
                     <p class="text-gray-300 text-lg">کاندیدای پوزیشن: <span class="text-white font-medium">کمپین منیجر (Campaign Manager)</span></p>
@@ -154,9 +156,9 @@
                         <span class="bg-white/10 px-3 py-1 rounded-md text-sm backdrop-blur-sm">آخرین شرکت: سام‌سرویس</span>
                     </div>
                 </div>
-                <div class="mt-6 sm:mt-0 text-center bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+                <div class="mt-6 sm:mt-0 text-center bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-yektanet-gold/60">
                     <div class="text-sm text-gray-300 mb-1">امتیاز کلی</div>
-                    <div class="text-4xl font-black text-yellow-400">3.6<span class="text-lg text-gray-400 font-normal">/5</span></div>
+                    <div class="text-4xl font-black text-yektanet-gold">3.6<span class="text-lg text-gray-400 font-normal">/5</span></div>
                 </div>
             </div>
             
@@ -234,7 +236,7 @@
                                 <span class="text-sm font-medium text-blue-600">۷/۱۰</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                        <div class="bg-yektanet-gold h-2.5 rounded-full" style="width: 70%"></div>
                             </div>
                         </div>
                         <div>
@@ -243,7 +245,7 @@
                                 <span class="text-sm font-medium text-green-600">۹/۱۰</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-green-600 h-2.5 rounded-full" style="width: 90%"></div>
+                        <div class="bg-yektanet-gold h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
@@ -474,7 +476,7 @@
 
         <!-- Yektanet 6-Dimension Framework -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-            <h2 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <h2 class="text-lg font-bold text-yektanet-jet mb-2 flex items-center gap-2">
                 <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
                 ارزیابی بر اساس ۶ بُعد یکتانت
             </h2>
@@ -651,7 +653,7 @@
             <a href="https://docs.google.com/document/d/1vXtbgPooqLPixUgHdLZYYR4Zv5qWtieQkmsPHMXVBks/edit?tab=t.bzpbf42446cl#heading=h.tv5lxf6pd0ra" 
                target="_blank" 
                rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+               class="inline-flex items-center gap-2 px-4 py-2 bg-yektanet-gold text-yektanet-jet rounded-lg hover:bg-yektanet-saffron transition-colors text-sm font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -665,7 +667,7 @@
             </div>
             <a href="Resume.pdf" 
                download="Yeganeh_Valimohammadi_Resume.pdf"
-               class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+               class="inline-flex items-center gap-2 px-4 py-2 bg-yektanet-gold text-yektanet-jet rounded-lg hover:bg-yektanet-saffron transition-colors text-sm font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>

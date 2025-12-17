@@ -1,0 +1,439 @@
+<!-- Phase 1: HTML Structure -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=yes">
+    <title>Yektanet ATS | گزارش ارزیابی یگانه ولی‌محمدی</title>
+    <style>
+        /* ===========================
+           SAHEL FONT FACE
+           =========================== */
+        @font-face {
+            font-family: 'Sahel';
+            src: url('../../Yektanet/fonts/font sahel/Sahel.eot');
+            src: url('../../Yektanet/fonts/font sahel/Sahel.eot?#iefix') format('embedded-opentype'),
+                 url('../../Yektanet/fonts/font sahel/Sahel.woff') format('woff'),
+                 url('../../Yektanet/fonts/font sahel/Sahel.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Sahel';
+            src: url('../../Yektanet/fonts/font sahel/Sahel-Bold.eot');
+            src: url('../../Yektanet/fonts/font sahel/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+                 url('../../Yektanet/fonts/font sahel/Sahel-Bold.woff') format('woff'),
+                 url('../../Yektanet/fonts/font sahel/Sahel-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Sahel';
+            src: url('../../Yektanet/fonts/font sahel/Sahel-Black.eot');
+            src: url('../../Yektanet/fonts/font sahel/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+                 url('../../Yektanet/fonts/font sahel/Sahel-Black.woff') format('woff'),
+                 url('../../Yektanet/fonts/font sahel/Sahel-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+    </style>
+    <!-- آیکون‌ها -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <!-- لوگوی یکتانت -->
+                <div class="yn-logo">
+                    <img src="../../Yektanet/logo/Logo Export-All Variants/Asset 3.svg" alt="یکتانت" style="height: 30px; width: auto;" />
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item"><i class="fas fa-home"></i> داشبورد</a>
+                <a href="#" class="nav-item active"><i class="fas fa-users"></i> کاندیداها</a>
+                <a href="#" class="nav-item"><i class="fas fa-chart-pie"></i> گزارش‌ها</a>
+                <a href="#" class="nav-item"><i class="fas fa-cog"></i> تنظیمات</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="breadcrumbs">استخدام > کمپین منیجر > <strong>یگانه ولی‌محمدی</strong></div>
+                <div class="user-profile">
+                    <span>مدیر استخدام</span>
+                    <div class="avatar">HR</div>
+                </div>
+            </header>
+
+            <!-- Report Dashboard -->
+            <div class="dashboard-content">
+                
+                <!-- Profile & Final Decision Card -->
+                <section class="card profile-card">
+                    <div class="profile-header">
+                        <div class="candidate-info">
+                            <h1>یگانه ولی‌محمدی</h1>
+                            <span class="role-badge">Campaign Manager Applicant</span>
+                        </div>
+                        <div class="decision-box status-rejected">
+                            <span class="decision-label">نتیجه نهایی</span>
+                            <span class="decision-value">❌ رد شده (Not Hired)</span>
+                        </div>
+                    </div>
+                    <div class="kpi-row">
+                        <div class="kpi-item">
+                            <span class="label">امتیاز کلی</span>
+                            <span class="value text-jet">2.8<small>/5</small></span>
+                        </div>
+                        <div class="kpi-item">
+                            <span class="label">تطابق شغلی</span>
+                            <span class="value text-red">27%</span>
+                        </div>
+                        <div class="kpi-item">
+                            <span class="label">مهارت ارتباطی</span>
+                            <span class="value text-green">8/10</span>
+                        </div>
+                        <div class="kpi-item">
+                            <span class="label">تجربه کمپین</span>
+                            <span class="value text-jet">0 سال</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Charts & Analysis Grid -->
+                <div class="grid-2-col">
+                    <!-- Chart Section -->
+                    <section class="card">
+                        <h3>📊 تحلیل شکاف مهارتی (Gap Analysis)</h3>
+                        <div class="chart-container">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                        <p class="insight-text">
+                            <i class="fas fa-exclamation-triangle"></i> گپ مهارتی در بخش فنی و شناخت پلتفرم بحرانی است.
+                        </p>
+                    </section>
+
+                    <!-- SWOT Analysis -->
+                    <section class="card">
+                        <h3>📋 ماتریس SWOT</h3>
+                        <div class="swot-grid">
+                            <div class="swot-box strength">
+                                <h4>✅ نقاط قوت</h4>
+                                <ul>
+                                    <li>مهارت‌های ارتباطی و CRM عالی</li>
+                                    <li>یادگیری سریع و Ownership</li>
+                                    <li>انرژی بالا و ضد حاشیه</li>
+                                </ul>
+                            </div>
+                            <div class="swot-box weakness">
+                                <h4>⚠️ نقاط ضعف</h4>
+                                <ul>
+                                    <li>صفر تجربه در مدیریت کمپین</li>
+                                    <li>شناخت سطحی از بیزینس لاین‌ها</li>
+                                    <li>ریسک رفتار اگرسیو (Aggressive)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Interviewer Feedback Table -->
+                <section class="card">
+                    <h3>👥 نظرات مصاحبه‌کنندگان</h3>
+                    <table class="yn-table">
+                        <thead>
+                            <tr>
+                                <th>نام مصاحبه‌کننده</th>
+                                <th>امتیاز</th>
+                                <th>نکات کلیدی</th>
+                                <th>نظر نهایی</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>امید شجاعی</td>
+                                <td>3.5/5</td>
+                                <td>حل عالی کیس مشتری، ضعف در شناخت یکتانت</td>
+                                <td><span class="badge yellow">مشروط</span></td>
+                            </tr>
+                            <tr>
+                                <td>حمیدرضا</td>
+                                <td>3.5/5</td>
+                                <td>ترجیح کار داخلی بجای ارتباط با مشتری</td>
+                                <td><span class="badge gray">نیاز به بررسی</span></td>
+                            </tr>
+                            <tr>
+                                <td>امیرحسین</td>
+                                <td>--</td>
+                                <td>جسارت بالا اما احتمال اگرسیو بودن</td>
+                                <td><span class="badge yellow">اولویت دوم</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </div>
+        </main>
+    </div>
+<!-- Phase 2: CSS Styles (Yektanet Brand Identity) -->
+<style>
+    :root {
+        /* Yektanet Primary Palette */
+        --yn-gold: #fed813;
+        --yn-saffron: #f3c42e;
+        --yn-jet: #323232;
+        --yn-white-smoke: #f2f2f2;
+        
+        /* Secondary Palette (Highlights) */
+        --yn-keppel: #2fbea8;       /* For Success/Strengths */
+        --yn-french-pink: #fd6f95;  /* For Danger/Weakness */
+        
+        /* Layout */
+        --border-radius: 8px;
+        --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+        font-family: 'Sahel', system-ui, sans-serif;
+        background-color: var(--yn-white-smoke);
+        color: var(--yn-jet);
+        direction: rtl;
+    }
+
+    /* Layout Structure */
+    .app-container { display: flex; min-height: 100vh; }
+    
+    /* Sidebar */
+    .sidebar {
+        width: 260px;
+        background-color: var(--yn-jet);
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo-area {
+        padding: 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: flex; align-items: center; gap: 10px;
+        font-weight: bold; font-size: 1.2rem;
+    }
+    
+    .yn-logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .yn-logo img {
+        height: 30px;
+        width: auto;
+        display: block;
+    }
+
+    .nav-menu { padding-top: 20px; }
+    .nav-item {
+        display: block; padding: 12px 24px;
+        color: #bbb; text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        user-select: none;
+    }
+    .nav-item:hover {
+        background-color: rgba(255,255,255,0.08);
+        color: var(--yn-gold);
+        transform: translateX(-3px);
+    }
+    .nav-item.active {
+        background-color: rgba(255,255,255,0.1);
+        color: var(--yn-gold);
+        border-right: 4px solid var(--yn-gold);
+        font-weight: bold;
+    }
+    .nav-item:active {
+        transform: translateX(-1px);
+    }
+
+    /* Main Content */
+    .main-content { flex: 1; display: flex; flex-direction: column; }
+    
+    .top-header {
+        background: white;
+        padding: 20px 40px;
+        display: flex; justify-content: space-between; align-items: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    .dashboard-content { padding: 40px; overflow-y: auto; }
+
+    /* Cards */
+    .card {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 25px;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow);
+        border: 1px solid #eee;
+    }
+
+    /* Typography & Headers */
+    h1 { font-size: 1.8rem; margin-bottom: 5px; }
+    h3 { margin-bottom: 20px; border-bottom: 2px solid var(--yn-gold); display: inline-block; padding-bottom: 5px; }
+    
+    /* Profile Section */
+    .profile-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+    .role-badge { background: var(--yn-white-smoke); padding: 5px 10px; border-radius: 4px; color: #666; font-size: 0.9rem; }
+    
+    .decision-box {
+        padding: 10px 20px; border-radius: 6px; text-align: center;
+        border: 2px solid;
+    }
+    .status-rejected { 
+        border-color: var(--yn-french-pink);
+        color: #c0392b;
+        background: rgba(253, 111, 149, 0.1);
+    }
+    .decision-label { display: block; font-size: 0.8rem; opacity: 0.8; }
+    .decision-value { font-weight: bold; font-size: 1.1rem; }
+
+    /* KPI Row */
+    .kpi-row { display: flex; gap: 20px; justify-content: space-between; margin-top: 20px; }
+    .kpi-item { flex: 1; background: var(--yn-white-smoke); padding: 15px; border-radius: 8px; text-align: center; }
+    .kpi-item .label { display: block; font-size: 0.9rem; color: #666; margin-bottom: 5px; }
+    .kpi-item .value { font-size: 1.4rem; font-weight: bold; }
+    .text-jet { color: var(--yn-jet); }
+    .text-red { color: var(--yn-french-pink); }
+    .text-green { color: var(--yn-keppel); }
+
+    /* Grid System */
+    .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+    /* Charts */
+    .chart-container { height: 250px; position: relative; }
+    .insight-text { margin-top: 15px; font-size: 0.9rem; color: #666; background: #fffbe6; padding: 10px; border-radius: 4px; border-right: 3px solid var(--yn-gold); }
+
+    /* SWOT Styles */
+    .swot-grid { display: grid; grid-template-rows: 1fr 1fr; gap: 15px; }
+    .swot-box { padding: 15px; border-radius: 6px; }
+    .swot-box.strength { background: rgba(47, 190, 168, 0.1); border: 1px solid var(--yn-keppel); }
+    .swot-box.weakness { background: rgba(253, 111, 149, 0.1); border: 1px solid var(--yn-french-pink); }
+    .swot-box h4 { margin-bottom: 10px; font-size: 1rem; }
+    .swot-box ul { padding-right: 20px; font-size: 0.9rem; line-height: 1.6; }
+
+    /* Table Styles */
+    .yn-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .yn-table th { text-align: right; color: #666; padding: 12px; border-bottom: 2px solid var(--yn-white-smoke); }
+    .yn-table td { padding: 15px 12px; border-bottom: 1px solid #eee; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+    .badge.yellow { background: var(--yn-gold); color: var(--yn-jet); }
+    .badge.gray { background: #e0e0e0; color: #666; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .app-container { flex-direction: column; }
+        .sidebar { width: 100%; }
+        .grid-2-col { grid-template-columns: 1fr; }
+        .kpi-row { flex-wrap: wrap; }
+    }
+</style>
+<!-- Phase 3: JavaScript for Data Visualization -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Yektanet Brand Colors for JS
+    const brandColors = {
+        gold: '#fed813',
+        jet: '#323232',
+        keppel: '#2fbea8', // Secondary
+        pink: '#fd6f95'    // Secondary
+    };
+
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    
+    // رادار چارت برای مقایسه نیاز شغل با مهارت کاندیدا
+    const skillsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['مدیریت کمپین', 'شناخت یکتانت', 'تحلیل داده', 'ارتباط با مشتری', 'یادگیری'],
+            datasets: [
+                {
+                    label: 'مهارت یگانه',
+                    data: [0, 10, 30, 80, 90], // داده‌های نرمال شده از گزارش
+                    backgroundColor: [
+                        brandColors.pink, // خیلی ضعیف
+                        brandColors.pink, 
+                        brandColors.pink, 
+                        brandColors.keppel, // قوت
+                        brandColors.keppel
+                    ],
+                    borderWidth: 0,
+                    borderRadius: 4
+                },
+                {
+                    label: 'حد نصاب مورد نیاز',
+                    data: [70, 60, 70, 60, 50], // تارگت لاین
+                    type: 'line',
+                    borderColor: brandColors.jet,
+                    borderWidth: 2,
+                    pointBackgroundColor: brandColors.gold,
+                    pointRadius: 4,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: { color: '#f2f2f2' },
+                    ticks: { color: brandColors.jet, font: { family: 'Sahel' } }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { color: brandColors.jet, font: { family: 'Sahel', weight: 'bold' } }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: { font: { family: 'Sahel' }, color: brandColors.jet }
+                }
+            }
+        }
+    });
+
+    // Navigation Menu Click Handler
+    document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault(); // جلوگیری از رفتن به #
+                
+                // حذف کلاس active از همه آیتم‌ها
+                navItems.forEach(nav => nav.classList.remove('active'));
+                
+                // اضافه کردن کلاس active به آیتم کلیک شده
+                this.classList.add('active');
+                
+                // گرفتن متن آیتم برای نمایش در console (می‌توانید این را تغییر دهید)
+                const menuText = this.textContent.trim();
+                console.log('منوی انتخاب شده:', menuText);
+                
+                // اینجا می‌توانید منطق تغییر محتوا را اضافه کنید
+                // مثلاً نمایش/مخفی کردن بخش‌های مختلف صفحه
+            });
+        });
+    });
+</script>
+</body>
+</html>

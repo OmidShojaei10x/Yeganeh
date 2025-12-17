@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>گزارش ارزیابی کاندیدا | یگانه ولی‌محمدی</title>
+
+  <!-- Geometric, clean Persian font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Yektanet Primary Palette */
+      --gold-web: #fed813;
+      --saffron:  #f3c42e;
+      --jet:      #323232;
+      --smoke:    #f2f2f2;
+      --white:    #ffffff;
+
+      /* Secondary (highlights only) */
+      --keppel:   #2fbea8;
+      --aqua:     #3de19c;
+      --honey:    #ffb113;
+      --pink:     #fd6f95;
+
+      /* Tertiary (data viz optional) */
+      --blue-jeans: #17b1fd;
+      --blueberry:  #797efe;
+      --slate-blue: #8763f8;
+      --lavender:   #b68cf8;
+
+      --shadow: 0 10px 30px rgba(50,50,50,.08);
+      --shadow2: 0 6px 18px rgba(50,50,50,.10);
+
+      --radius: 14px;
+      --radius-sm: 10px;
+
+      --container: 1200px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      font-family: "Vazirmatn", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--jet);
+      background: var(--smoke);
+      line-height: 1.75;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    button{ font-family: inherit; }
+
+    .app{
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    /* Top bar (logo must be on white) */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(242,242,242,.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(50,50,50,.08);
+    }
+    .topbar-inner{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 260px;
+    }
+    .logo-wrap{
+      background: var(--white); /* Ensures full-color logo is on white */
+      border-radius: 12px;
+      padding: 10px 12px;
+      box-shadow: 0 6px 18px rgba(50,50,50,.06);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo{
+      height: 24px;
+      width: auto;
+      display: block;
+    }
+    .top-title{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .top-title strong{
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .top-title span{
+      font-size: 12px;
+      opacity: .8;
+    }
+
+    .actions{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn{
+      border: 1px solid rgba(50,50,50,.12);
+      background: var(--white);
+      color: var(--jet);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(50,50,50,.06);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .btn.primary{
+      border-color: rgba(50,50,50,.18);
+      background: linear-gradient(0deg, var(--gold-web), var(--saffron));
+    }
+    .btn:focus{ outline: 3px solid rgba(254,216,19,.35); outline-offset: 2px; }
+
+    main{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 18px;
+      width: 100%;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .card{
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(50,50,50,.06);
+      overflow: hidden;
+    }
+    .card-head{
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(50,50,50,.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .card-title{
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .2px;
+      margin: 0;
+    }
+    .card-body{
+      padding: 14px 16px;
+    }
+
+    .hero{
+      padding: 16px;
+      border-radius: var(--radius);
+      background:
+        radial-gradient(900px 220px at 20% 0%, rgba(254,216,19,.55), rgba(254,216,19,0)),
+        radial-gradient(700px 260px at 90% 10%, rgba(243,196,46,.55), rgba(243,196,46,0)),
+        var(--white);
+      border: 1px solid rgba(50,50,50,.06);
+      box-shadow: var(--shadow);
+    }
+    .hero-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .candidate h1{
+      margin: 0 0 6px 0;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--jet);
+    }
+    .candidate .meta{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      font-size: 13px;
+      opacity: .92;
+    }
+    .chip{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(50,50,50,.04);
+      border: 1px solid rgba(50,50,50,.08);
+      font-weight: 700;
+    }
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--gold-web);
+      display: inline-block;
+      box-shadow: 0 0 0 4px rgba(254,216,19,.22);
+    }
+    .dot.neg{ background: var(--pink); box-shadow: 0 0 0 4px rgba(253,111,149,.18); }
+    .dot.ok{ background: var(--keppel); box-shadow: 0 0 0 4px rgba(47,190,168,.18); }
+
+    .summary{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .mini{
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(50,50,50,.08);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      box-shadow: 0 8px 22px rgba(50,50,50,.06);
+    }
+    .mini .k{ font-size: 12px; opacity: .8; font-weight: 700; }
+    .mini .v{ margin-top: 4px; font-size: 16px; font-weight: 900; }
+    .mini .sub{ margin-top: 6px; font-size: 12px; opacity: .85; }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 13px;
+      border: 1px solid rgba(50,50,50,.10);
+      background: var(--white);
+    }
+    .pill.no{
+      border-color: rgba(253,111,149,.35);
+      background: linear-gradient(0deg, rgba(253,111,149,.10), rgba(253,111,149,.05));
+    }
+    .pill .badge{
+      width: 10px; height: 10px; border-radius: 999px;
+      background: var(--pink);
+      box-shadow: 0 0 0 4px rgba(253,111,149,.16);
+    }
+
+    .section{
+      margin-top: 16px;
+    }
+
+    /* Tables */
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td{
+      padding: 10px 10px;
+      border-bottom: 1px solid rgba(50,50,50,.06);
+      vertical-align: top;
+    }
+    th{
+      text-align: right;
+      font-size: 12px;
+      opacity: .85;
+      font-weight: 900;
+      background: rgba(50,50,50,.02);
+    }
+    tr:last-child td{ border-bottom: 0; }
+
+    .num{
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .barrow{
+      display: grid;
+      grid-template-columns: 140px 1fr 70px;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(50,50,50,.06);
+    }
+    .barrow:last-child{ border-bottom: 0; }
+    .barrow .label{
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .track{
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(50,50,50,.06);
+      overflow: hidden;
+      border: 1px solid rgba(50,50,50,.06);
+    }
+    .fill{
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold-web), var(--saffron));
+      border-radius: 999px;
+    }
+    .fill.low{
+      background: linear-gradient(90deg, rgba(253,111,149,.95), rgba(253,111,149,.55));
+    }
+    .fill.mid{
+      background: linear-gradient(90deg, var(--honey), rgba(255,177,19,.55));
+    }
+    .fill.high{
+      background: linear-gradient(90deg, var(--keppel), rgba(47,190,168,.55));
+    }
+
+    /* Lists */
+    ul{
+      margin: 8px 0 0 0;
+      padding: 0 18px 0 0;
+    }
+    li{ margin: 6px 0; }
+
+    /* SWOT grid */
+    .swot{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .swot .box{
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(50,50,50,.08);
+      background: var(--white);
+      box-shadow: 0 8px 22px rgba(50,50,50,.06);
+      overflow: hidden;
+    }
+    .swot .box h3{
+      margin: 0;
+      padding: 12px 12px;
+      font-size: 13px;
+      font-weight: 900;
+      border-bottom: 1px solid rgba(50,50,50,.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tag{
+      font-size: 11px;
+      font-weight: 900;
+      padding: 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(50,50,50,.10);
+      background: rgba(50,50,50,.03);
+      white-space: nowrap;
+    }
+    .tag.pos{ border-color: rgba(47,190,168,.35); background: rgba(47,190,168,.08); }
+    .tag.neg{ border-color: rgba(253,111,149,.35); background: rgba(253,111,149,.08); }
+    .tag.warn{ border-color: rgba(255,177,19,.35); background: rgba(255,177,19,.10); }
+
+    .swot .box .content{ padding: 12px; font-size: 13px; }
+
+    /* Accordion */
+    details{
+      border: 1px solid rgba(50,50,50,.08);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      box-shadow: 0 8px 22px rgba(50,50,50,.06);
+      overflow: hidden;
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      list-style: none;
+      cursor: pointer;
+      padding: 12px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid rgba(50,50,50,.06);
+      user-select: none;
+    }
+    summary::-webkit-details-marker{ display: none; }
+    .panel{ padding: 12px; font-size: 13px; }
+    .rate{
+      font-weight: 900;
+      padding: 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(50,50,50,.10);
+      background: rgba(50,50,50,.03);
+      white-space: nowrap;
+    }
+
+    /* Sidebar charts */
+    .viz{
+      display: grid;
+      gap: 12px;
+    }
+    .canvas-wrap{
+      padding: 14px 16px 16px;
+    }
+    canvas{ width: 100%; height: auto; display: block; }
+
+    .note{
+      font-size: 12px;
+      opacity: .85;
+    }
+
+    footer{
+      max-width: var(--container);
+      margin: 0 auto;
+      width: 100%;
+      padding: 14px 18px 20px;
+      font-size: 12px;
+      opacity: .85;
+    }
+
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: 1fr; }
+      .summary{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+      .swot{ grid-template-columns: 1fr; }
+    }
+
+    @media print{
+      .topbar, .actions{ display: none !important; }
+      body{ background: #fff; }
+      .card, .hero, details, .mini, .swot .box{ box-shadow: none !important; }
+      main{ padding: 0; max-width: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="logo-wrap" aria-label="لوگوی یکتانت روی پس‌زمینه سفید">
+            <!-- جایگزین کنید: فایل رسمی لوگوی یکتانت (تمام‌رنگ) -->
+            <img class="logo" src="assets/yektanet-logo-color.svg" alt="Yektanet" />
+          </div>
+          <div class="top-title">
+            <strong>گزارش ارزیابی کاندیدا</strong>
+            <span>استاندارد گزارش‌دهی داخلی</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="button" id="toggleAll">باز/بسته کردن بخش‌ها</button>
+          <button class="btn primary" type="button" onclick="window.print()">خروجی چاپ / PDF</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / SUMMARY -->
+      <section class="hero" aria-label="خلاصه ارزیابی">
+        <div class="hero-top">
+          <div class="candidate">
+            <h1>یگانه ولی‌محمدی</h1>
+            <div class="meta">
+              <span class="chip"><span class="dot"></span> پوزیشن: کمپین منیجر (Campaign Manager)</span>
+              <span class="chip"><span class="dot neg"></span> تصمیم نهایی: NOT RECOMMENDED FOR HIRE</span>
+              <span class="chip"><span class="dot neg"></span> سطح ریسک: High</span>
+            </div>
+          </div>
+
+          <div class="pill no" role="status" aria-label="نتیجه نهایی">
+            <span class="badge"></span>
+            NOT RECOMMENDED FOR HIRE
+          </div>
+        </div>
+
+        <div class="summary" role="list" aria-label="شاخص‌های کلیدی">
+          <div class="mini" role="listitem">
+            <div class="k">امتیاز کلی</div>
+            <div class="v">2.8 / 5</div>
+            <div class="sub">بر اساس جمع‌بندی پنل و شکاف مهارتی نسبت به Core Responsibility</div>
+          </div>
+          <div class="mini" role="listitem">
+            <div class="k">دلیل اصلی</div>
+            <div class="v">عدم تطابق با نیازهای حیاتی نقش</div>
+            <div class="sub">کمبود تجربه کمپین، شناخت سطحی از پلتفرم و ضعف تحلیلی</div>
+          </div>
+          <div class="mini" role="listitem">
+            <div class="k">گزینه جایگزین پیشنهادی</div>
+            <div class="v">Customer Success / Account Coordinator</div>
+            <div class="sub">هم‌راستاتر با نقاط قوت ارتباطی و CRM</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <!-- MAIN COLUMN -->
+        <div style="display:grid; gap: 16px;">
+          <!-- Executive Summary -->
+          <article class="card" aria-label="خلاصه اجرایی">
+            <div class="card-head">
+              <h2 class="card-title">خلاصه اجرایی</h2>
+              <span class="tag neg">نتیجه: No Hire</span>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><strong>تصمیم نهایی:</strong> NOT RECOMMENDED FOR HIRE</li>
+                <li><strong>دلیل اصلی:</strong> عدم تناسب تجربیات و مهارت‌های فعلی با نیازهای حیاتی پوزیشن کمپین منیجر یکتانت</li>
+                <li><strong>امتیاز کلی:</strong> 2.8/5</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Job Fit Analysis -->
+          <article class="card" aria-label="تحلیل تطابق با نیازهای پوزیشن">
+            <div class="card-head">
+              <h2 class="card-title">تحلیل تطابق با نیازهای پوزیشن</h2>
+              <span class="tag warn">وزن‌دهی + نمره</span>
+            </div>
+            <div class="card-body">
+              <table aria-label="جدول تطابق شغلی">
+                <thead>
+                  <tr>
+                    <th>شاخص کلیدی</th>
+                    <th class="num">وزن</th>
+                    <th class="num">نمره</th>
+                    <th>توضیحات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>تجربه مدیریت کمپین تبلیغاتی</strong></td>
+                    <td class="num">35%</td>
+                    <td class="num">0/10</td>
+                    <td>هیچ تجربه عملی در راه‌اندازی/مدیریت کمپین ندارد</td>
+                  </tr>
+                  <tr>
+                    <td><strong>شناخت پلتفرم یکتانت</strong></td>
+                    <td class="num">25%</td>
+                    <td class="num">1/10</td>
+                    <td>شناخت بسیار سطحی؛ business lines را نمی‌شناسد</td>
+                  </tr>
+                  <tr>
+                    <td><strong>مهارت‌های تحلیلی (CTR/CPC/ROI)</strong></td>
+                    <td class="num">20%</td>
+                    <td class="num">3/10</td>
+                    <td>تجربه محدود در سئو؛ ضعف در تحلیل مالی و امکان‌سنجی</td>
+                  </tr>
+                  <tr>
+                    <td><strong>مهارت‌های ارتباطی و Customer Management</strong></td>
+                    <td class="num">15%</td>
+                    <td class="num">8/10</td>
+                    <td>نقطه قوت: تجربه خوب در CRM، Happy Call، تعامل با مشتری</td>
+                  </tr>
+                  <tr>
+                    <td><strong>یادگیری و رشد (Growth Mindset)</strong></td>
+                    <td class="num">5%</td>
+                    <td class="num">9/10</td>
+                    <td>نقطه قوت: یادگیرنده سریع و پروآکتیو</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="margin-top: 12px; padding: 12px; border-radius: 12px; border: 1px solid rgba(50,50,50,.08); background: rgba(254,216,19,.12);">
+                <strong>نتیجه تطابق:</strong> 2.75/10 (27.5%)
+              </div>
+            </div>
+          </article>
+
+          <!-- SWOT -->
+          <article class="card" aria-label="تحلیل SWOT">
+            <div class="card-head">
+              <h2 class="card-title">تحلیل SWOT</h2>
+              <span class="tag">جمع‌بندی چهاروجهی</span>
+            </div>
+            <div class="card-body">
+              <div class="swot">
+                <div class="box">
+                  <h3>Strengths <span class="tag pos">نقاط قوت</span></h3>
+                  <div class="content">
+                    <ul>
+                      <li>مهارت‌های ارتباطی قوی و مدیریت مشتری ناراضی</li>
+                      <li>Ownership مناسب (Mini-Book و Happy Call)</li>
+                      <li>یادگیری خودآموز ابزارها (Clarity، Elementor)</li>
+                      <li>تجربه CRM و پیاده‌سازی فرآیند</li>
+                      <li>تحمل فشار کاری</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <h3>Weaknesses <span class="tag neg">نقاط ضعف</span></h3>
+                  <div class="content">
+                    <ul>
+                      <li>صفر تجربه در کمپین منیجمنت</li>
+                      <li>شناخت ضعیف از اکوسیستم/محصولات یکتانت</li>
+                      <li>ضعف تحلیلی و امکان‌سنجی (نمونه: فیل شدن پروژه به علت هزینه‌ها)</li>
+                      <li>ریسک رفتار اگرسیو (طبق نظر چند مصاحبه‌کننده)</li>
+                      <li>پرش ذهنی و کمبود فوکوس در ارائه</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <h3>Opportunities <span class="tag warn">فرصت‌ها</span></h3>
+                  <div class="content">
+                    <ul>
+                      <li>سن پایین (24 سال) و ظرفیت رشد</li>
+                      <li>تحصیلات MBA منابع انسانی؛ مسیر رشد به People/Account مسیرپذیر است</li>
+                      <li>علاقه به یادگیری</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <h3>Threats <span class="tag neg">تهدیدها</span></h3>
+                  <div class="content">
+                    <ul>
+                      <li>شکاف بزرگ با نیاز نقش و هزینه آموزشی بالا</li>
+                      <li>ریسک تعارض تیمی/فرهنگی</li>
+                      <li>ریسک ترک پس از آموزش</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Interviewers -->
+          <article class="card" aria-label="جمع‌بندی مصاحبه‌کنندگان">
+            <div class="card-head">
+              <h2 class="card-title">جمع‌بندی مصاحبه‌کنندگان</h2>
+              <span class="tag">پنل</span>
+            </div>
+            <div class="card-body">
+              <details open>
+                <summary>
+                  <span>امید شجاعی</span>
+                  <span class="rate">3.5 / 5</span>
+                </summary>
+                <div class="panel">
+                  <div style="display:grid; gap: 10px;">
+                    <div>
+                      <strong>نکات مثبت</strong>
+                      <ul>
+                        <li>حل کیس‌های مدیریت مشتری</li>
+                        <li>اولویت‌بندی و روحیه مدیریتی</li>
+                        <li>پتانسیل رشد</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>نکات منفی</strong>
+                      <ul>
+                        <li>شناخت ضعیف از یکتانت</li>
+                        <li>استفاده از AI در سطح کاربردی</li>
+                        <li>مثال‌های محدود در یادگیری</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>حمیدرضا</span>
+                  <span class="rate">3.5 / 5</span>
+                </summary>
+                <div class="panel">
+                  <div style="display:grid; gap: 10px;">
+                    <div>
+                      <strong>نکات مثبت</strong>
+                      <ul>
+                        <li>مناسب نقش‌های اجرایی</li>
+                        <li>تجربه مستقیم در فروش و پارتنرشیپ</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>نکات منفی (کلیدی)</strong>
+                      <ul>
+                        <li>ترجیح فرآیندهای داخلی به ارتباط مستقیم با مشتری (تعارض با JD کمپین منیجر)</li>
+                        <li>ضعف در تحلیل مالی و امکان‌سنجی</li>
+                        <li>ریسک رفتار اگرسیو</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>امیرحسین</span>
+                  <span class="rate">اولویت دوم</span>
+                </summary>
+                <div class="panel">
+                  <div style="display:grid; gap: 10px;">
+                    <div>
+                      <strong>نکات مثبت</strong>
+                      <ul>
+                        <li>جسارت و Ownership</li>
+                        <li>دقت و ریزبینی</li>
+                        <li>کاری و کم‌حاشیه</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>نکات منفی</strong>
+                      <ul>
+                        <li>جسارت ممکن است به اگرسیو شدن تبدیل شود</li>
+                        <li>کمتر به نقاط ضعف اشاره کرده</li>
+                        <li>تاکید بالا روی فضا/اختیار (ریسک تعارض با فرآیند)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>مهتا</span>
+                  <span class="rate">با احتیاط</span>
+                </summary>
+                <div class="panel">
+                  <div style="display:grid; gap: 10px;">
+                    <div>
+                      <strong>نکات مثبت</strong>
+                      <ul>
+                        <li>سوال‌های خوب و ساخت‌یافته</li>
+                        <li>درگیر با AI</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong>نکات منفی</strong>
+                      <ul>
+                        <li>ریسک اگرسیو بودن در تیم</li>
+                        <li>پرش ذهنی</li>
+                        <li>تاثیرپذیری از سبک مدیر (ریسک فرهنگی)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <!-- Gap Analysis -->
+          <article class="card" aria-label="تحلیل شکاف مهارتی">
+            <div class="card-head">
+              <h2 class="card-title">Gap Analysis</h2>
+              <span class="tag neg">شکاف‌های بحرانی</span>
+            </div>
+            <div class="card-body">
+              <table aria-label="جدول شکاف مهارتی">
+                <thead>
+                  <tr>
+                    <th>نیاز یکتانت</th>
+                    <th>سطح مهارت فعلی</th>
+                    <th class="num">سطح Gap</th>
+                    <th class="num">زمان یادگیری تخمینی</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>مدیریت کمپین در پلتفرم یکتانت</td>
+                    <td>صفر</td>
+                    <td class="num"><span class="tag neg">Critical</span></td>
+                    <td class="num">2–3 ماه</td>
+                  </tr>
+                  <tr>
+                    <td>بهینه‌سازی CTR/CPC/ROI</td>
+                    <td>خیلی ضعیف</td>
+                    <td class="num"><span class="tag neg">Critical</span></td>
+                    <td class="num">3–4 ماه</td>
+                  </tr>
+                  <tr>
+                    <td>تحلیل داده و تصمیم‌گیری Data-driven</td>
+                    <td>ضعیف</td>
+                    <td class="num"><span class="tag warn">High</span></td>
+                    <td class="num">2–3 ماه</td>
+                  </tr>
+                  <tr>
+                    <td>شناخت اکوسیستم یکتانت</td>
+                    <td>1/10</td>
+                    <td class="num"><span class="tag warn">High</span></td>
+                    <td class="num">1–2 ماه</td>
+                  </tr>
+                  <tr>
+                    <td>مشاوره تبلیغاتی به مشتریان</td>
+                    <td>محدود</td>
+                    <td class="num"><span class="tag warn">Medium</span></td>
+                    <td class="num">3–6 ماه</td>
+                  </tr>
+                  <tr>
+                    <td>ارتباط با مشتری</td>
+                    <td>قوی</td>
+                    <td class="num"><span class="tag pos">None</span></td>
+                    <td class="num">—</td>
+                  </tr>
+                  <tr>
+                    <td>گزارش‌نویسی</td>
+                    <td>متوسط</td>
+                    <td class="num"><span class="tag">Low</span></td>
+                    <td class="num">1 ماه</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="margin-top: 12px; padding: 12px; border-radius: 12px; border: 1px solid rgba(50,50,50,.08); background: rgba(253,111,149,.08);">
+                <strong>زمان کل برای Ready شدن:</strong> 4–6 ماه (نیازمند آموزش intensive + منتورینگ)
+              </div>
+            </div>
+          </article>
+
+          <!-- Final Decision -->
+          <article class="card" aria-label="تصمیم نهایی و توصیه‌ها">
+            <div class="card-head">
+              <h2 class="card-title">تصمیم نهایی و توصیه‌ها</h2>
+              <span class="tag neg">No Hire</span>
+            </div>
+            <div class="card-body">
+              <div style="display:grid; gap: 10px;">
+                <div>
+                  <strong>دلایل اصلی</strong>
+                  <ul>
+                    <li>شکاف مهارتی بزرگ در مسئولیت‌های Core (کمپین، بهینه‌سازی، تحلیل داده)</li>
+                    <li>ریسک Cultural Fit (ریسک اگرسیو بودن + تعارض با ماهیت Customer-facing نقش)</li>
+                    <li>ROI پایین برای شرکت به علت زمان/هزینه آموزش و ریسک ترک</li>
+                  </ul>
+                </div>
+
+                <div style="display:grid; gap: 10px; margin-top: 6px;">
+                  <div style="padding: 12px; border-radius: 12px; border: 1px solid rgba(50,50,50,.08); background: rgba(254,216,19,.10);">
+                    <strong>گزینه A (توصیه اصلی):</strong> ادامه جستجو برای کاندیدای دارای تجربه کمپین منیجمنت و تحلیل داده
+                  </div>
+
+                  <div style="padding: 12px; border-radius: 12px; border: 1px solid rgba(50,50,50,.08); background: rgba(47,190,168,.08);">
+                    <strong>گزینه B (پیشنهاد جایگزین):</strong> تعریف نقش Customer Success Specialist / Account Coordinator
+                    <ul>
+                      <li>تمرکز: پشتیبانی ارتباط با مشتری، Happy Call، گزارش‌نویسی، همکاری داخلی</li>
+                      <li>مزیت: استفاده مستقیم از نقاط قوت ارتباطی با Gap کمتر</li>
+                    </ul>
+                  </div>
+
+                  <div style="padding: 12px; border-radius: 12px; border: 1px solid rgba(50,50,50,.08); background: rgba(255,177,19,.10);">
+                    <strong>گزینه C (پرریسک):</strong> Hire مشروط با دوره آموزشی و KPI هفتگی (فقط در نبود گزینه‌های دیگر)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="viz" aria-label="ویژوال‌سازی امتیازها">
+          <article class="card">
+            <div class="card-head">
+              <h2 class="card-title">نمای کلی امتیاز</h2>
+              <span class="tag">Data Viz</span>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="donut" width="520" height="320" aria-label="نمودار دونات امتیاز کلی"></canvas>
+              <div class="note">رنگ اصلی نمودار: Gold Web (#fed813) و متن/محورها: Jet (#323232)</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <h2 class="card-title">Scorecard</h2>
+              <span class="tag">از 5</span>
+            </div>
+            <div class="card-body">
+              <div class="barrow">
+                <div class="label">Job Fit</div>
+                <div class="track"><div class="fill mid" data-value="40"></div></div>
+                <div class="num">2/5</div>
+              </div>
+              <div class="barrow">
+                <div class="label">Technical Skills</div>
+                <div class="track"><div class="fill low" data-value="20"></div></div>
+                <div class="num">1/5</div>
+              </div>
+              <div class="barrow">
+                <div class="label">Soft Skills</div>
+                <div class="track"><div class="fill high" data-value="80"></div></div>
+                <div class="num">4/5</div>
+              </div>
+              <div class="barrow">
+                <div class="label">Cultural Fit</div>
+                <div class="track"><div class="fill mid" data-value="40"></div></div>
+                <div class="num">2/5</div>
+              </div>
+              <div class="barrow">
+                <div class="label">Growth Potential</div>
+                <div class="track"><div class="fill high" data-value="80"></div></div>
+                <div class="num">4/5</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <h2 class="card-title">ریسک‌های کلیدی</h2>
+              <span class="tag neg">High</span>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>عدم تجربه در Core Responsibility (مدیریت/بهینه‌سازی کمپین، تحلیل)</li>
+                <li>Onboarding طولانی و نیاز به منتور اختصاصی</li>
+                <li>ریسک تعارض فرهنگی و رفتاری</li>
+                <li>ریسک ترک پس از آموزش</li>
+              </ul>
+            </div>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <strong>یادداشت داخلی:</strong> این صفحه برای استفاده در فرآیند جذب طراحی شده است. برای انتشار بیرونی مناسب نیست.
+    </footer>
+  </div>
+
+  <script>
+    // Animate score bars
+    (function initBars(){
+      const fills = document.querySelectorAll(".fill[data-value]");
+      fills.forEach(el => {
+        const v = Number(el.getAttribute("data-value")) || 0;
+        requestAnimationFrame(() => { el.style.width = Math.max(0, Math.min(100, v)) + "%"; });
+      });
+    })();
+
+    // Donut chart (no external libs; palette-compliant)
+    (function donut(){
+      const canvas = document.getElementById("donut");
+      const ctx = canvas.getContext("2d");
+
+      const score = 2.8;
+      const max = 5;
+      const ratio = Math.max(0, Math.min(1, score / max));
+
+      // Setup for crisp rendering on HiDPI
+      const dpr = window.devicePixelRatio || 1;
+      const cssW = canvas.width, cssH = canvas.height;
+      canvas.width = Math.floor(cssW * dpr);
+      canvas.height = Math.floor(cssH * dpr);
+      canvas.style.width = cssW + "px";
+      canvas.style.height = cssH + "px";
+      ctx.scale(dpr, dpr);
+
+      const centerX = cssW * 0.34;
+      const centerY = cssH * 0.52;
+      const radius = Math.min(cssW, cssH) * 0.28;
+      const thickness = radius * 0.35;
+
+      // Colors (Yektanet)
+      const jet = getComputedStyle(document.documentElement).getPropertyValue("--jet").trim();
+      const gold = getComputedStyle(document.documentElement).getPropertyValue("--gold-web").trim();
+      const track = "rgba(50,50,50,.08)";
+
+      // Background track
+      ctx.lineWidth = thickness;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.strokeStyle = track;
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Value arc (start at top)
+      const start = -Math.PI / 2;
+      const end = start + (Math.PI * 2 * ratio);
+
+      ctx.beginPath();
+      ctx.strokeStyle = gold;
+      ctx.arc(centerX, centerY, radius, start, end);
+      ctx.stroke();
+
+      // Text
+      ctx.fillStyle = jet;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      ctx.font = "800 28px Vazirmatn";
+      ctx.fillText(score.toFixed(1) + " / " + max, centerX, centerY - 4);
+
+      ctx.font = "700 12px Vazirmatn";
+      ctx.globalAlpha = 0.85;
+      ctx.fillText("امتیاز کلی", centerX, centerY + 26);
+      ctx.globalAlpha = 1;
+
+      // Right-side explanation block
+      const bx = cssW * 0.62;
+      const by = cssH * 0.24;
+
+      function label(y, title, value, color){
+        // small dot
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.arc(bx, y, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = jet;
+        ctx.textAlign = "right";
+        ctx.textBaseline = "alphabetic";
+        ctx.font = "800 12px Vazirmatn";
+        ctx.fillText(title, bx + 220, y + 4);
+
+        ctx.globalAlpha = 0.85;
+        ctx.font = "700 12px Vazirmatn";
+        ctx.fillText(value, bx + 220, y + 22);
+        ctx.globalAlpha = 1;
+      }
+
+      const pink = getComputedStyle(document.documentElement).getPropertyValue("--pink").trim();
+      const honey = getComputedStyle(document.documentElement).getPropertyValue("--honey").trim();
+      const keppel = getComputedStyle(document.documentElement).getPropertyValue("--keppel").trim();
+
+      label(by + 0,  "تصمیم", "NOT RECOMMENDED FOR HIRE", pink);
+      label(by + 58, "ریسک", "High", honey);
+      label(by + 116,"نقطه قوت اصلی", "ارتباط با مشتری و CRM", keppel);
+    })();
+
+    // Toggle all accordions
+    (function(){
+      const btn = document.getElementById("toggleAll");
+      let open = false;
+
+      btn.addEventListener("click", () => {
+        const items = document.querySelectorAll("details");
+        open = !open;
+        items.forEach(d => d.open = open);
+      });
+    })();
+  </script>
+</body>
+</html>
